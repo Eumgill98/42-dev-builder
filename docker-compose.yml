@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  42_dev_builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ubuntu_2204_container
+    volumes:
+      - ./42:/42
+    tty: true
+    stdin_open: true
+    networks:
+      - development_network
+
+networks:
+  development_network:

@@ -1,0 +1,2 @@
+export USER=intraID
+export MAIL=$USER@student.gyeongsan.kr
