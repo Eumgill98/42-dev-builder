@@ -30,3 +30,15 @@ docker-compose down -v
 ## 4. Please save your source code in `/42/`
 - If you save to that path(`/42/`) **in your docker container Ubuntu**, it will automatically save locally as well (because it's **mounted**) 
 - It save your local path (`./42/`)
+- If you want to rename the folder to be mounted, modify the `volumes` part of the `docker-compose.yaml`
+```yaml
+...
+ container_name: ubuntu_2204_container
+    volumes:
+      - ./42:/42
+    tty: true
+...
+```
+
+## To do
+- [ ] install `norminette`
